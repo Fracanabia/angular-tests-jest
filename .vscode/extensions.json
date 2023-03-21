@@ -1,4 +1,29 @@
 {
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=827846
-  "recommendations": ["angular.ng-template"]
+  "recommendations": [
+    "angular.ng-template",
+    "johnpapa.angular2",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "dracula-theme.theme-dracula",
+    "usernamehw.errorlens",
+    "pkief.material-icon-theme",
+    "ms-vscode.remote-server",
+    "ms-vscode-remote.remote-wsl",
+    "john-crowson.angular-file-changer",
+    "alexiv.vscode-angular2-files",
+    "cyrilletuzi.angular-schematics",
+    "streetsidesoftware.code-spell-checker",
+    "kisstkondoros.vscode-codemetrics",
+    "naumovs.color-highlight",
+    "wallabyjs.console-ninja",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "eamodio.gitlens",
+    "yzhang.markdown-all-in-one",
+    "davidanson.vscode-markdownlint",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "chakrounanas.turbo-console-log"
+  ]
 }
