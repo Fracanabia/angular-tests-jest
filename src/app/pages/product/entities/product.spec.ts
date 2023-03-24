@@ -1,16 +1,19 @@
 import { faker } from '@faker-js/faker';
 import { Product } from './product';
 
+const getProductToAdd = () => ({
+  id: faker.datatype.uuid(),
+  name: faker.commerce.productName(),
+  price: Number(faker.commerce.price(0, 1000)),
+});
+
 type SutTypes = {
   sut: Product;
 };
 
 const makeSut = (): SutTypes => {
-  const sut = new Product({
-    id: faker.datatype.uuid(),
-    name: faker.commerce.productName(),
-    price: Number(faker.commerce.price()),
-  });
+  const product = getProductToAdd();
+  const sut = new Product(product);
   return { sut };
 };
 
@@ -21,13 +24,8 @@ describe('Product', () => {
   });
 
   test('should valid price', () => {
-    expect(
-      () =>
-        new Product({
-          id: faker.datatype.uuid(),
-          name: faker.commerce.productName(),
-          price: -1,
-        })
-    ).toThrow('Invalid price!');
+    const product = getProductToAdd();
+    product.price = -1;
+    expect(() => new Product(product)).toThrow('Invalid price!');
   });
 });
